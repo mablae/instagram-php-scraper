@@ -15,7 +15,7 @@ $instagram = new Instagram();
 $nonPrivateAccountMedias = $instagram->getMedias('kevin');
 echo $nonPrivateAccountMedias[0]->getLink();
 ```
-If you use auth it is recommended to cash user session, in this case you don't need run `$instagram->login()` method every time your program runs:
+If you use authentication it is recommended to cache the user session, in this case you don't need run `$instagram->login()` method every time your program runs:
 
 ```php
 $instagram = Instagram::withCredentials('username', 'password', '/path/to/cache/folder/');
